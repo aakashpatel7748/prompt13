@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    /* background-color: #C39D8D; */
+    overflow-x: hidden;
+}
+.cantanar{
+    width: 100vw;
+    height: 100vh;
+     background-image: url("photo-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+   
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    color: white;
+}
+nav > h3{
+    font-size: 20px;
+    
+}
+nav > h3 > span{
+    color: red;
+}
+nav > h4 > span{
+    color: red;
+}
+nav > h4{
+    font-size: 20px;
+}
+
+.cantaner2{
+    width: 100%;
+    
+    display: grid;
+      grid-template-columns: repeat(4,  1fr);
+      grid-template-rows: 200px 60px;
+    justify-content: center;
+    align-items: center;   
+    column-gap: 10px;
+    row-gap: 100px; 
+}
+.box > img{
+    grid-row-start: 1;
+  grid-column-end: 3;
+  padding: 0 10%;
+  rotate: -10deg;
+  border-radius: 8%;
+}
+
+.box5 > img {
+   width: 70%;
+   padding-top: 10%;
+   rotate: -90deg;
+}
+ .box6 > img{
+    margin: 5% 10%;
+    width: 70%;
+ }
+
+
+ .box > img:hover{
+   
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+ }
+
+.content3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hading > h3{
+    padding: 5%;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.hading > h1{
+    font-size: 40px;
+    letter-spacing: -01px;
+}
+.hading > p{
+    font-size: 20px;
+    padding: 5%;
+}
+.hading > p > span{
+    color: red;
+    
+}
+
+/* ===========responsive======== */
+
+@media(max-width:600px){
+    body{
+        width: 100vw;
+        height: 100vh;
+        background-color: red;
+    }
+
+    .cantanar{
+        height: 100vh;
+        width: 100vw;
+    }
+    .cantaner2{
+        width: 100%;
+        height: 100%;
+        /* display: flex; */
+        flex-direction: column;
+       display: grid;
+       grid-template-columns: 1fr;
+       gap: 1px;
+    }
+    .box{
+        width: 100%;
+        /* padding: 30px 0; */
+
+    }
+    .cantaner2 > .box > img{
+        width: 100%;
+       rotate: 0deg;
+    
+    }
+    .content3{
+        width: 100%;
+    }
+    .hading{
+     padding: 10px 32px;
+        background-color: red;
+    }
+
+    .hading > h3, h1, p{
+        color: black;
+    }
+    .hading > p > span{
+        color: rgb(237, 137, 139);
+    }
+}
